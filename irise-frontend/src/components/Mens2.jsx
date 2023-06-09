@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Mens = ()=>{
+const Mens = ({images})=>{
     const[number,setnumber]=useState(9876);
     const [isliked,setisliked]=useState(true);
    // console.log(number,"number")
@@ -23,6 +23,12 @@ const Mens = ()=>{
         {isliked ? <h2>not liked!</h2>:<h2>liked</h2>}
         
         <button onClick={like}>like</button>
+        {images.map((singleImage)=> (
+            <div>
+                <h1>images:</h1>
+                <img src={singleImage}/>
+            </div>
+        ))}
         </div>
     )
 }
