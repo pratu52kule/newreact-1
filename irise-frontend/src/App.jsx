@@ -8,11 +8,15 @@ import { Route,Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { Greeting } from './components/Greeting';
  import {Login} from './components/Login'
+import DynamicCss from './components/Dynamiccss';
+import DynamicClasses from './components/DynamicClasses';
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <Routes>
+        <Route path='/DynamicClasses' element={<DynamicClasses/>} />
+        <Route path='/Dynamiccss' element={<DynamicCss/>} />
       <Route path='/Login' element={<Login />} />
       <Route path='/Greeting' element={<Greeting />} />
         <Route path='/' element={<Home />} />
