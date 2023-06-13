@@ -10,11 +10,17 @@ import { Greeting } from './components/Greeting';
  import {Login} from './components/Login'
 import DynamicCss from './components/Dynamiccss';
 import DynamicClasses from './components/DynamicClasses';
+import Props from './components/Props';
+import Childrenprops from'./components/Childrenprops';
+import RegisterForm from'./components/RegisterForm';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+     { /*<Navbar/>*/}
       <Routes>
+        <Route path='/RegisterForm' element={<RegisterForm/>}/>
+        <Route path='/Childrenprops' element={<Childrenprops myValue='Sign Up' />}/>
+        <Route path='/Props' element={<Props myName="Irise" myAge='20'/>}/>
         <Route path='/DynamicClasses' element={<DynamicClasses/>} />
         <Route path='/Dynamiccss' element={<DynamicCss/>} />
       <Route path='/Login' element={<Login />} />
