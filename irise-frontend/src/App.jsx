@@ -5,7 +5,7 @@ import Mens from './components/Mens2';
 import Women from './components/Women2';
 import Home from './components/Home';
 import { Route,Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+//import Navbar from './components/Navbar';
 import { Greeting } from './components/Greeting';
  import {Login} from './components/Login'
 import DynamicCss from './components/Dynamiccss';
@@ -13,11 +13,19 @@ import DynamicClasses from './components/DynamicClasses';
 import Props from './components/Props';
 import Childrenprops from'./components/Childrenprops';
 import RegisterForm from'./components/RegisterForm';
+import GetProducts from './components/GetProducts'
+import TakeProduct from './components/TakeProduct'
+import HandleLoading from './components/HandleLoading';
+import LoginForm from './components/LoginForm'
 function App() {
   return (
     <div className="App">
      { /*<Navbar/>*/}
       <Routes>
+        <Route path='/Loginform'  element={<LoginForm/>}/>
+        <Route path='/HandleLoading' element={<HandleLoading/>}/>
+        <Route path='/TakeProduct' element={<TakeProduct/>}/>
+        <Route path='/GetProduts' element={<GetProducts/>}/>
         <Route path='/RegisterForm' element={<RegisterForm/>}/>
         <Route path='/Childrenprops' element={<Childrenprops myValue='Sign Up' />}/>
         <Route path='/Props' element={<Props myName="Irise" myAge='20'/>}/>
