@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom';
 const RegisterForm = () => {
+    const router = useNavigate();
     const [userData, setUserData] = useState({ name: '', email: '', password: '', confirmPassword: "" });
     console.log(userData, "userData")
 
@@ -18,13 +19,21 @@ const RegisterForm = () => {
                 
             if(userData.password.length < 8 && userData.confirmPassword.length < 8){
                 if(userData.password===userData.confirmPassword){
-                    alert("data submitted")
+                     // call backend api and pass the data or use localstorage
+
+                     var array = JSON.parse(localStorage.getItem("Users")) || [];
+                     array.push(userData)
+                     localStorage.setItem("Users", JSON.stringify(array))
+                     router('/login-form')
+                     alert("Data Submitted to backend!")
                      setUserData({ name: '', email: '', password: '', confirmPassword: "" });
+ 
+                    
                 }else{
                     alert("password and confirm password not match")
                 }
                }else {
-                alert("Password and Confirm pass must be more than or equal to 8 digits.")
+                alert("data submitted")
             }
         } else {
             alert("Something is missing, Please fill the all details..")
