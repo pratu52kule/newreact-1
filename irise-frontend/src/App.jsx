@@ -4,7 +4,7 @@ import Kids from './components/Kids2'
 import Mens from './components/Mens2';
 import Women from './components/Women2';
 import Home from './components/Home';
-import { Route,Routes } from 'react-router-dom';
+import { Route,Router,Routes } from 'react-router-dom';
 //import Navbar from './components/Navbar';
 import { Greeting } from './components/Greeting';
  import {Login} from './components/Login'
@@ -18,11 +18,17 @@ import TakeProduct from './components/TakeProduct';
 import HandleLoading from './components/HandleLoading';
 import LoginForm from './components/LoginForm';
 import Practicegetproduct from './components/Practicegetproduct';
+import Singleproduct from './components/Singleproduct';
+import Card from './components/Card';
+
 function App() {
   return (
     <div className="App">
      { /*<Navbar/>*/}
       <Routes>
+        
+        <Route path='/Card' element={<Card/>}/>
+        <Route path='/Singleproduct/:id' element={<Singleproduct/>}/>
         <Route path='/Practicegetproduct' element={<Practicegetproduct/>}/>
         <Route path='/Loginform'  element={<LoginForm/>}/>
         <Route path='/HandleLoading' element={<HandleLoading/>}/>
