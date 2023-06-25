@@ -29,6 +29,7 @@ const LoginForm = () => {
                 }
             }
             if (isUserFound == true) {
+                localStorage.setItem("current-user", JSON.stringify(userData))
                 alert("You are logged In.")
                 router('/');
                 setUserData({ email: '', password: '' })
