@@ -29,7 +29,7 @@ const Home =() =>{
     return(
         
       <div style={style}>
-      {currentUser?.email ? <button onClick={logout}>Logout</button> : <button onClick={() => router('/login-form')}>Login</button>}
+      {currentUser?.email ? <button onClick={logout}>Logout</button> : <button onClick={() => router('/loginform')}>Login</button>}
       <h1 style={styleForHome}>Home</h1>
     </div>
     
