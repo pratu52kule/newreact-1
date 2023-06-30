@@ -22,12 +22,14 @@ import Singleproduct from './components/Singleproduct';
 import Card from './components/Card';
 import Addproduct from './components/Addproduct';
 import Product from './components/Product';
+import Memo from './components/Memo';
 
 function App() {
   return (
     <div className="App">
      { /*<Navbar/>*/}
       <Routes>
+        <Route path='/Memo' element={<Memo/>}/>
         <Route path='/Product' element={<Product/>}/>
         <Route path='/Addproduct' element={<Addproduct/>}/>
         <Route path='/Card' element={<Card/>}/>
